@@ -1,0 +1,608 @@
+/* universal styles */
+
+:root {
+    /*ref. point on screen 2715vw x 1411vh 1vw = 27.15px 1vh=14.11px */
+    /*Text Variables*/
+    --fs-small:clamp(0.75rem,0.516vw,1rem);        /* min fs = 12px */
+    --fs-medium:clamp(0.75rem,0.737vw,1.5rem);        /* min fs = 16px */
+    --fs-large:clamp(0.75rem,1.05vw,2.25rem);       /* min fs = 24px  */
+    --fs-xl:clamp(0.75rem,1.455vw,3.375rem);      /* min fs = 36px  Applied: header-navLinks, */
+    --fs-xxl:clamp(.75rem,2.067vw,5.062rem);     /* min fs = 54px */
+    --fs-logo: clamp(2.25rem, 3.131vw,6.562rem); /*65px-85px-105px*/
+/*
+    --fs-small:clamp(0.75rem,0.516vw,1rem);       
+    --fs-medium:clamp(1rem,0.737vw,1.5rem);        
+    --fs-large:clamp(1.5rem,1.05vw,2.25rem);       
+    --fs-xl:clamp(1.563rem,1.455vw,3.375rem);      
+    --fs-xxl:clamp(1.953rem,2.067vw,5.062rem);     
+     --fs-logo: clamp(4.0625rem, 3.131vw,6.562rem); 
+*/
+    --text-primaryColor:  #280c01; 
+    
+    /*footer text color, button background color*/
+    --footerText-buttons: #ffbf00;
+    
+    /*Background Variables*/
+    --background-primary: #a1b5b3;
+    --background-altrnt: #ede9e8;
+    --Background-footer:  #280c01;
+}
+
+* {
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+}
+
+/* Root styling */
+html, body {
+    background-color: var(--background-primary);
+    
+    height: 100%; 
+    width: 100%; 
+
+    font-size: 100%; 
+    color: var(--text-primaryColor);
+
+    overflow: auto;
+}
+
+body {
+    display: flex; 
+    flex-direction: column;
+    min-height: 100vh; 
+}
+
+main {
+    display: flex; 
+    flex-direction: column; 
+    flex: 1;
+    font-family: "Playfair Display", serif; 
+}
+
+/* header */ 
+
+.specials {
+    background-color:var(--footerText-buttons);
+
+    font-size:  var(--fs-medium);  
+    text-align: center; 
+
+    padding: .3rem 0; 
+}
+
+header nav { 
+    display: inline-flex; 
+    flex-direction: row; 
+    justify-content: space-between;
+
+    width: 100%;
+
+    padding: 1rem 2rem; 
+    background-color:var(--background-primary);
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start; 
+    align-items: center; 
+
+    width: 25vw; 
+
+    font-family: "Inspiration", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.logo img {
+    width: clamp(48px, 4vw, 115px);
+    height: auto; 
+}
+
+.logo p {
+    font-size: var(--fs-logo);
+    align-self: center;
+}
+
+/* Applies to all Nav Ul > li */
+.mainNav {
+    display: flex; 
+    flex-direction: row; 
+    align-items: center;
+
+    width: auto;
+}
+
+.mainNav li {
+    padding: 0 1rem;
+    list-style-type: none;
+}
+
+/* General layout for all links */
+a {
+    font-family: "Playfair Display", serif;
+    font-size: var(--fs-xl); 
+    color:var(--text-primaryColor); 
+
+}
+a:link {
+    text-decoration: none; 
+}
+  
+a:visited {
+  //color: purple; 
+}
+  
+a:hover {
+    color:var(--footerText-buttons);
+    
+}
+  
+a:active {
+    text-decoration: underline;
+} 
+
+/* General - Order online button */
+.orderOnline {
+    background-color:var(--footerText-buttons);
+    border-radius: 30px; 
+
+    font-size: var(--fs-xl); 
+    color:  var(--text-primaryColor);
+
+    padding: .5vw 1vw;
+}
+
+a.orderOnline:link {
+    text-decoration: none; 
+}
+  
+a.orderOnline:visited {
+  //color: purple; 
+}
+  
+a.orderOnline:hover {
+    color:  var(--text-primaryColor);
+    text-decoration: none;
+
+    border: 0px; 
+    border: 1px solid  var(--text-primaryColor);
+}
+  
+a.orderOnline:active {
+    text-decoration: underline; 
+} 
+
+@media only screen and (max-width: 800px) {
+  a{
+    font-size: var(--fs-xxl);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+    .specials {
+        font-size: var(--fs-small);
+        padding: 0.1rem 0; 
+    }
+
+    header nav {
+        padding: 1rem; 
+    }
+
+    .logo p {
+        font-size: 2rem;
+        font-family: "Moon Dance", serif; 
+    }
+    
+    .logo img{
+        display: none; 
+    }
+
+    .mainNav li {
+        padding: 0 0.3rem; 
+    }
+}
+
+
+/* Hero */
+.hero {
+    position: relative;
+
+    width: 100%;
+    height: clamp(250px, 35vw, 900px); 
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/Img/landingphoto.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.reserve
+{
+    /* Reservation */
+    position: absolute;
+    top: 7vw;
+    left: 10vw;
+
+    display: flex; 
+    flex-direction: column;
+
+    background-color: var(--background-primary);
+    border: 1px solid #ede9e8;
+    box-shadow: 1vw 1vw 2.3vw grey;
+    width: 24%;
+    height: 90%;
+    padding: 1.2vw;
+ 
+    text-align: center;  
+}
+
+.reserve h4 {
+    font-size: var(--fs-xxl);
+    padding-bottom: 1vw; 
+    text-decoration: underline;  
+}
+
+.reserve p {
+    font-size: var(--fs-xl);
+    padding-bottom: 1.5vw;  
+}
+
+@media only screen and (max-width: 800px) {
+    .hero{
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end; 
+        padding: 2vw; 
+    }
+    
+    .reserve {
+
+        display: flex; 
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+        position: relative; 
+        top:0;
+        left: 0; 
+
+        width: 35%;
+        height: 30%; 
+
+        padding-bottom: 1rem; 
+        box-shadow: 0vw 0vw 0vw black; ;  
+    }
+
+    .reserve p {
+        display: none; 
+    }
+
+    .reservation{
+        width: 10rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .reserve { 
+        background-color: var(--background-primary); 
+        height: 15%;
+        padding: .07rem;
+        border: 1px solid var(--footerText-buttons)
+    }
+    .reserve h4{
+        display: none; 
+    }
+
+    .reservation {
+        width: 8rem; 
+    }
+}
+
+/* About */
+
+.about {
+    display: flex; 
+    flex-direction: column; 
+    flex-grow: 1; 
+    flex-shrink: 1; 
+    justify-content: center; 
+    align-items: center; 
+    align-content: center; 
+
+    background-color: var(--background-altrnt);
+    width: 100%; 
+
+    padding-top: 7vw;
+    padding-bottom: 3vw; 
+}
+
+.about p {
+    font-size: clamp(0.875rem, 2.5vw, 3rem);
+     
+    text-align: center; 
+    font-family: "Moon Dance", serif;
+    
+    padding-right: 5%;
+    padding-left: 5%; 
+    padding-bottom: 4vw;
+
+    max-height: 50vh; 
+    overflow: hidden; 
+}
+
+.menu-photos {
+    display: flex;
+    justify-content: space-evenly; 
+   
+    width: 100%;
+}
+
+.menu-photos img {
+    flex: 1 1 150px; 
+
+    min-width: 150px;
+    height: auto; 
+
+    padding: 1vw .5vw; 
+}
+
+@media only screen and (max-width: 800px) {
+    .about{
+        height: auto;
+    }
+    
+    .about p {
+        display: none; 
+    }
+    .menu-photos{ 
+        flex-flow: row wrap;
+        justify_content: center; 
+        gap: 2vw;
+        padding: 0; 
+    }
+
+    .menu-photos img{
+        flex: 0 2 150px; 
+    }
+
+    .odd {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+}
+
+/* Other Services Sections*/
+
+.service-block { 
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between;
+    width: 100%;
+    flex-grow: 1; 
+    flex-shrink: 1; 
+    font-family: "Lora", serif; 
+
+    padding: 2vw 10vw;
+}
+
+.service-display {
+    display: flex; 
+    flex-direction: row; 
+    width: 100%;
+    height: auto; 
+    padding: 2vw 4vw;
+}
+
+.service-display figure {
+    padding: 0 2vw; 
+}
+
+.service-display figure img {
+    width: clamp(200px,20vw,400px);
+    height: clamp(200px,20vw,400px);
+    object-fit: cover; 
+}
+
+.service-display {
+    display: flex;
+    fex-direction: column; 
+    align-items: flex-start; 
+}
+.service-display h4 {
+    font-size: var(--fs-xxl); 
+    text-align: center; 
+    
+    padding-bottom: .8vw; 
+}
+
+.service-display p {
+    font-size: var(--fs-xl); 
+    text-align: center;
+
+    padding-bottom: 3vw; 
+}
+
+.display-oderBttn {
+    width: 100%; 
+    display: flex; 
+    justify-content: center; 
+}
+
+@media only screen and (max-width: 600px) {
+    .service-block {
+        padding: 2vw 4vw;
+        height: auto; 
+    }
+    .service-display{
+        flex-flow: wrap; 
+        justify-content: center; 
+        align-items: center; 
+        padding: 0;
+    }
+    .service-display h4 {
+        font-size: var(--fs-large);
+        padding-bottom: 0.5vw; 
+    }
+    .service-descritpion {
+        display: none; 
+    }
+    .service-display p {
+        font-size: var(--fs-medium); 
+    }
+    .member-signUp {
+        font-size: var(--fs-large);
+    }
+}
+
+
+/* Our Staff Section */
+.staff-block {
+    display: flex;
+    flex-direction: column; 
+
+    background-color: var(--background-altrnt); 
+    padding: 2vw 4vw; 
+
+    color: var(--text-primaryColor);
+    font-family: "Moon Dance", serif; 
+}
+
+.staff-block div h4 {
+    font-size: var(--fs-logo); 
+    text-align: center;
+
+    padding-bottom: 2vw;
+}
+
+.staff-display {
+    display: flex;
+    flex-flow: wrap; 
+    justify-content: space-evenly; 
+    gap: .5rem; 
+}
+
+.staff-display figure {
+    display: flex;
+    flex-direction: column; 
+
+    padding:0 2vw; 
+}
+
+.staff-display figure img {
+    width: clamp(150px,20vw,400px); 
+    height: clamp(150px,20vw,400px); 
+    object-fit: cover; 
+}
+
+.staff-display figure figcaption {
+    text-align: center; 
+    font-size: var(--fs-xxl); 
+}
+
+@media only screen and (max-width: 600px){
+    
+    
+    .staff-display figure figcaption{
+        display: none;
+    }
+}
+
+/*Bottom Hero */
+.hero-bottom {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/Img/footerlanding.jpg");
+}
+
+/* footer section*/
+footer {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; 
+    flex-shrink: 1; 
+    background-color: var(--text-primaryColor);
+
+    font-family: "Playfair Display", Serif;
+    color: var(--footerText-buttons);
+}
+
+.footer-location {
+    display: flex; 
+    flex-flow: wrap; 
+    
+    justify-content: space-evenly; 
+
+    padding: 3vw 0; 
+}
+
+.footer-contact h5 {
+    font-size: var(--fs-xxl); 
+    text-align: center; 
+
+    padding-bottom: 1vw; 
+} 
+.footer-contact p {
+    font-size: var(--fs-xl); 
+    text-align: center; 
+
+    padding-bottom: 1vw; 
+}
+
+/* bottom page navigation */
+.footer-nav {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between; 
+}
+
+.footer-menuNav {
+    display: inline-flex; 
+    flex-direction: row; 
+    justify-content: space-between; 
+    
+    width: 100%; 
+    padding: 0.4vw 1vw; 
+}
+
+.footer-links {
+    color: var(--footerText-buttons);
+    font-size: var(--fs-large);     
+}
+
+a.footer-links:link {
+    text-decoration: none;
+}
+  
+a.footer-links:visited {
+  //color: purple; 
+}
+  
+a.footer-links:hover {
+    color:  var(--background-primary);
+    text-decoration: underline;
+    border: 1px solid  var(--text-primaryColor);
+}
+  
+a.footer-links:active {
+    //color: #ffbf00;
+     
+} 
+
+.social-img {
+    width: clamp(20px,1.5vw,54px); 
+}
+
+@media only screen and (max-width: 600px) {
+
+}
+
+
+/*Notes:
+Flex-grow/shrink - it wasn't working because I had declared "flex-flow: wrap" since the images where just moving 
+the next row, the never got a chance to shrink. instead ai just declare "display: flex" screen reaches a certain
+size then i can use media query to add "flex-flow: wrap"
+
+*/

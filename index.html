@@ -3,120 +3,232 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inspiration&family=Lora:ital,wght@0,400..700;1,400..700&family=Moon+Dance&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/style/styles.css">
     <title>Ameyali</title>
 </head>
 <body>
+
     <header>
+
         <!--Special -->
-        <div>
-            <h3>Specials</h3>
+        <div class="specials">
+            <h3>🍷 This Week Only: Enjoy 20% Off All Reserve Wines – Sip & Savor for Less! 🍇✨</h3>
         </div>
+
         <!-- Logo + main Navbar-->
         <nav>
-            <h1>Ameyali</h1>
-            <ul>
-                <li>About</li>
-                <li>Locations</li>
-                <li>Menu</li>
-                <li><button>Order</button></li>
+            <div class="logo">
+                <img class="social-img" src="assets/Img/logo.png" alt="">
+                <p>Ameyali</p>
+            </div>
+            <ul class="mainNav">
+                <li><a href="">About</a></li>
+                <li><a href="">Menu</a></li>
+                <li><a href="">Locations</a></li>
+                <li><a class="orderOnline" href="">Order Online</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
         <!-- Main Hero section + Reservation modal-->
         <section class="hero">
-            <div>
-                <h2>Reservations</h2>
-                <p>About reservations </p>
-                <button>Reserve Now!</button>
+            <div class="reserve">
+                <h4>
+                    Reserve Your Table!
+                </h4>
+                <p>
+                    Indulge in an unforgettable evening of fine wines, artisanal bites, 
+                    and a cozy ambiance. Secure your spot now and let us take care of the rest. 
+                </p>
+                <p>
+                    <b>Hours of Operation</b>
+                </p>
+                <p><strong>Mon-Fri:</strong> 4pm - 10pm</p>
+                <p><strong>Sat-Sun:</strong> 4pm - Mid</p>
+                <a class="orderOnline reservation" href="">Book a Table</a>
             </div>
         </section>
+
         <!-- Statement + menu showcase-->
         <section class="about">
             <div>
-                <p>Statement</p>
+                <p>
+                    <i>
+                        &quot;At Ameyali, our mission is to create a welcoming space 
+                        where wine enthusiasts can discover, savor, and celebrate exceptional wines.&quot;
+                    </i>
+                </p>
             </div>
-            <div>
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
+            <div class="menu-photos">
+                <img src="assets/Img/foodTacos.jpg" alt="">
+                <img src="assets/Img/foodMain.jpg" alt="">
+                <img class="odd" src="assets/Img/foodTable.jpg" alt="">
+                <img src="assets/Img/foodCocktail.jpg" alt="">
+                <img src="assets/Img/foodWine.jpg" alt="">
+                
             </div>
         </section>
+
         <!-- additional services + membership -->
-        <section class="service">
-            <div>
+        <section class="service-block">
+            
+            <!-- Service 1 -->
+            <div class="service-display" >
                 <figure>
-                    <img src="" alt="">
-                    <figcaption>something</figcaption>
+                    <img class="social-img" src="assets/Img/wineTakeOut.jpg" alt="">
                 </figure>
                 <div>
-                    <h4></h4>
-                    <p></p>
-                </div>
+                    <h4>
+                        Grab & Go – Deliciously Fast!
+                    </h4>
+                    <p class="service-descritpion">
+                        Order your favorite wine and gourmet bites to-go—perfectly paired, ready to 
+                        enjoy anywhere! Whether you're planning a cozy night in, a picnic in the 
+                        park, or a special celebration, our expertly curated selections make every 
+                        moment delicious. Simply choose, pick up, and savor the perfect pairing 
+                        hassle-free!
+                    </p>
+                    <div class="display-oderBttn">
+                        <a class="orderOnline" href="">Order Online</a></div>
+                    </div>
             </div>
-            <div>
-                <figure>
-                    <img src="" alt="">
-                    <figcaption>something</figcaption>
-                </figure>
+
+            <!-- Service 2 -->
+            <div class="service-display">
+                    <figure>
+                        <img class="social-img" src="assets/Img/wineEvents.jpg" alt="">
+                    </figure>
                 <div>
-                    <h4></h4>
-                    <p></p>
+                    <h4>Elevated Catering, Effortlessly Delivered</h4>
+                    <p class="service-descritpion">
+                        Impress your guests with our expertly crafted catering, featuring premium wines 
+                        and gourmet bites tailored for any occasion. From intimate gatherings to grand 
+                        celebrations, we bring the perfect pairings to your event with ease. 
+                        Simply choose your menu, and we'll handle the rest—flavor, elegance, and 
+                        convenience in every bite!
+                    </p>
+                    <p>
+                        <u>
+                            Call (000) 000-0000
+                        </u>
+                    </p>
                 </div>
+
             </div>
-            <div>
+            
+            <!-- Service 3-->
+            <div class="service-display">
                 <figure>
-                    <img src="" alt="">
-                    <figcaption>something</figcaption>
+                    <img class="social-img" src="assets/Img/wineclub2.jpg" alt="">
                 </figure>
                 <div>
-                    <h4></h4>
-                    <p></p>
-                    <button>Reservation</button>
+                    <h4>
+                        Sip, Savor, Repeat – Join Our Wine Club
+                    </h4>
+                    <p class="service-descritpion">
+                        Elevate your wine experience with exclusive access to hand-selected bottles, 
+                        gourmet pairings, and member-only perks. Enjoy seasonal selections, special 
+                        discounts, and VIP tastings—all curated for your palate. Join today and uncork 
+                        a world of flavor, delivered straight to your door!
+                    </p>
+                    <p>
+                        <a class="member-signUp" href="">Click to Join US !</a>
+                    </p>
+                    
                 </div>
             </div>
         </section>
+       
+        <!--Staff Section-->
+        <section class="staff-block">
+            <div>
+                <h4>Our Dedicated Staff</h4>
+            </div>
+            <div class="staff-display">
+                <figure>
+                    <img class="social-img" src="assets/Img/staffChef.jpg" alt="">
+                    <figcaption>Chef Juan</figcaption>
+                </figure>
+                <figure>
+                    <img class="social-img" src="assets/Img/staffWineDirector.jpg" alt="">
+                    <figcaption>Wine Director Makena</figcaption>
+                </figure>
+                <figure>
+                    <img class="social-img" src="assets/Img/staffManager.jpg" alt="">
+                    <figcaption>General Manager Sonia</figcaption>
+                </figure>
+            </div>
+        </section>
+
         <!--Garden Hero-->
-        <section class="garden-hero"></section>
+        <section class="hero hero-bottom"></section>
+
     </main>
+
     <!-- Locations + footer Navbar-->
     <footer>
-        <section>
-            <div></div>
-            <div></div>
+        <section class="footer-location">
+            <div class="footer-contact">
+                <h5>Location</h5>
+                <p>
+                    1234 Maple staffWineDirector
+                </p>
+                <p>
+                    Springfield, NY 10001, USA
+                </p>
+                <p>
+                    (000)000-0000
+                </p>
+            </div>
+            <div class="footer-contact">
+                <h5>Hours of Operation:</h5>
+                <p>
+                    <strong>Mon-Fri:</strong> 4pm - 10pm
+                </p>
+                <p>
+                    <strong>Sat-Sun:</strong> 4pm - Mid
+                </p>
+            </div>
         </section>
-        <section>
-            <nav>
-                <ul>
-                    <li><a href="">View Menu</a></li>
-                    <li><button>Order Now</button></li>
+        <section class="footer-nav">
+            <nav class="footer-menuNav">
+                <ul class="mainNav" >
+                    <li><a class="footer-links" href="">Menu</a></li>
+                    <li><a class="footer-links" href="">Order Online</a></li>
                 </ul>
-                <ul>
+                <ul class="footer-socialNav mainNav">
                     <li>
                         <a href="">
-                            <img src="" alt="">
+                            <img class="social-img" src="/assets/Img/facebook.png" alt="">
                         </a>
                     </li>
                     <li>
                         <a href="">
-                            <img src="" alt="">
+                            <img  class="social-img" src="/assets/Img/insta.png" alt="">
                         </a>
                     </li>
                     <li>
                         <a href="">
-                            <img src="" alt="">
+                            <img class="social-img" src="/assets/Img/snapchat.png" alt="">
                         </a>
                     </li>
                     <li>
                         <a href="">
-                            <img src="" alt="">
+                            <img class="social-img" src="/assets/Img/threats.png" alt="">
                         </a>
                     </li>
                     <li>
                         <a href="">
-                            <img src="" alt="">
+                            <img class="social-img" src="/assets/Img/tweet.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img class="social-img"  src="/assets/Img/youtube.png" alt="">
                         </a>
                     </li>
                 </ul>
@@ -124,4 +236,5 @@
         </section>
     </footer>
 </body>
+
 </html>
